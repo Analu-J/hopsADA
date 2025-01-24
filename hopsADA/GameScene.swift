@@ -22,16 +22,17 @@ class GameScene: SKScene {
 
     //(placeholder character)
         character = SKSpriteNode(imageNamed: "Hops")
-        character.position = CGPoint(x: self.frame.midX, y: self.frame.minY + 100)
-        character.physicsBody?.allowsRotation = false
-        character.physicsBody?.restitution = 1.0
-        character.physicsBody?.friction = 0.0
-        character.physicsBody?.linearDamping = 0.0
-        character.physicsBody?.affectedByGravity = true
-        character.physicsBody?.isDynamic = false
-        
-
-        self.addChild(character)
+                character.position = CGPoint(x: self.frame.midX, y: self.frame.minY + 100)
+                character.physicsBody = SKPhysicsBody(rectangleOf: character.size)
+                character.physicsBody?.allowsRotation = false
+                character.physicsBody?.restitution = 1.0
+                character.physicsBody?.friction = 0.0
+                character.physicsBody?.linearDamping = 0.0
+                character.physicsBody?.affectedByGravity = true
+                character.physicsBody?.isDynamic = false
+        character.xScale = 0.5
+        character.yScale = 0.5
+                self.addChild(character)
 
      
         createPlatform(at: CGPoint(x: self.frame.midX, y: self.frame.minY + 50))
@@ -78,7 +79,7 @@ class GameScene: SKScene {
             startLabel.removeFromParent()
         } else {
             
-            touchLocation = touch.location(in: self).x
+           // touchLocation = touch.location(in: self).x
         }
     }
 
