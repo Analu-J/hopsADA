@@ -79,7 +79,7 @@ class GameScene: SKScene {
             startLabel.removeFromParent()
         } else {
             
-           // touchLocation = touch.location(in: self).x
+            touchLocation = touch.location(in: self).x
         }
     }
 
