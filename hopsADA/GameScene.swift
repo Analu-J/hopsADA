@@ -29,7 +29,7 @@ class GameScene: SKScene {
         character.physicsBody?.linearDamping = 0.0
         character.physicsBody?.affectedByGravity = true
         character.physicsBody?.isDynamic = false
-        var location = String()
+        
 
         self.addChild(character)
 
