@@ -30,8 +30,8 @@ class GameScene: SKScene {
                 character.physicsBody?.linearDamping = 0.0
                 character.physicsBody?.affectedByGravity = true
                 character.physicsBody?.isDynamic = false
-//                character.xScale = 0.3
-//                character.yScale = 0.3
+                character.xScale = 0.3
+                character.yScale = 0.3
                 self.addChild(character)
 
      
